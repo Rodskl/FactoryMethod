@@ -1,0 +1,10 @@
+package FactoryMethod;
+
+public class ServicoEmprestimo implements IServico {
+    public String executar() {
+        return "Empréstimo realizado com sucesso";
+    }
+    public String cancelar() {
+        return "Empréstimo cancelado";
+    }
+}

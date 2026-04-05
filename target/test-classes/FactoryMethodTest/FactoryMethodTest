@@ -1,0 +1,30 @@
+package FactoryMethod;
+
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class ServicoFactoryTest {
+
+    @Test
+    void deveRetornarExcecaoParaServicoInexistente() {
+        try {
+            IServico servico = ServicoFactory.obterServico("Venda");
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("Serviço inexistente", e.getMessage());
+        }
+    }
+
+    @Test
+    void deveExecutarEmprestimo() {
+        IServico servico = ServicoFactory.obterServico("Emprestimo");
+        assertEquals("Empréstimo realizado com sucesso", servico.executar());
+    }
+
+    @Test
+    void deveExecutarDevolucao() {
+        IServico servico = ServicoFactory.obterServico("Devolucao");
+        assertEquals("Devolução finalizada", servico.executar());
+    }
+}
