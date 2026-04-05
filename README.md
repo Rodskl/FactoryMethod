@@ -1,1 +1,1 @@
-# FactoryMethod
+![FactoryMethod](./img/Captura%20de%20tela%202026-04-05%20204235.png)
